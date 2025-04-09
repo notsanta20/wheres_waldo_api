@@ -1,0 +1,30 @@
+{
+  "name": "wheres_waldo_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notsanta20/wheres_waldo_api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/notsanta20/wheres_waldo_api/issues"
+  },
+  "homepage": "https://github.com/notsanta20/wheres_waldo_api#readme",
+  "dependencies": {
+    "@prisma/client": "^6.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "prisma": "^6.6.0"
+  }
+}
