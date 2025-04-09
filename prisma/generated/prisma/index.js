@@ -124,7 +124,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/Users/santhosh/Developer/code/wheres_waldo_api/generated/prisma",
+      "value": "/Users/santhosh/Developer/code/wheres_waldo_api/prisma/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -143,25 +143,26 @@ const config = {
   },
   "relativeEnvPaths": {
     "rootEnvPath": null,
-    "schemaEnvPath": "../../.env"
+    "schemaEnvPath": "../../../.env"
   },
-  "relativePath": "../../prisma",
+  "relativePath": "../..",
   "clientVersion": "6.6.0",
   "engineVersion": "f676762280b54cd07c770017ed3711ddde35f37a",
   "datasourceNames": [
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "LOCAL_DATABASE_URL",
-        "value": "postgresql://santhosh:saiviyan@localhost:5432/wheres_waldo?schema=public"
+        "value": null
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"LOCAL_DATABASE_URL\")\n}\n\nmodel Coords {\n  id        String @id @default(uuid())\n  character String\n  xMin      Int\n  xMax      Int\n  yMin      Int\n  yMax      Int\n}\n",
-  "inlineSchemaHash": "a02ad40229aa048cbb85645973c33f574149e51c3a68a85f9e4a056168ba60b7",
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"./generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"LOCAL_DATABASE_URL\")\n}\n\nmodel Coords {\n  id        String @id @default(uuid())\n  character String\n  xMin      Int\n  xMax      Int\n  yMin      Int\n  yMax      Int\n}\n",
+  "inlineSchemaHash": "54dded13ece1c89739011ffe9822df8cef18220a4a6a4951e84ab8b9906612c5",
   "copyEngine": true
 }
 
@@ -170,8 +171,8 @@ const fs = require('fs')
 config.dirname = __dirname
 if (!fs.existsSync(path.join(__dirname, 'schema.prisma'))) {
   const alternativePaths = [
+    "prisma/generated/prisma",
     "generated/prisma",
-    "prisma",
   ]
   
   const alternativePath = alternativePaths.find((altPath) => {
@@ -201,7 +202,7 @@ Object.assign(exports, Prisma)
 
 // file annotations for bundling tools to include these files
 path.join(__dirname, "libquery_engine-darwin-arm64.dylib.node");
-path.join(process.cwd(), "generated/prisma/libquery_engine-darwin-arm64.dylib.node")
+path.join(process.cwd(), "prisma/generated/prisma/libquery_engine-darwin-arm64.dylib.node")
 // file annotations for bundling tools to include these files
 path.join(__dirname, "schema.prisma");
-path.join(process.cwd(), "generated/prisma/schema.prisma")
+path.join(process.cwd(), "prisma/generated/prisma/schema.prisma")
