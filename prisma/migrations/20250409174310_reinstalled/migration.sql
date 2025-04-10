@@ -9,3 +9,12 @@ CREATE TABLE "Coords" (
 
     CONSTRAINT "Coords_pkey" PRIMARY KEY ("id")
 );
+
+-- CreateTable
+CREATE TABLE "Users" (
+    "id" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
+    "time" INTEGER NOT NULL,
+
+    CONSTRAINT "Users_pkey" PRIMARY KEY ("id")
+);

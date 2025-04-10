@@ -126,6 +126,12 @@ exports.Prisma.CoordsScalarFieldEnum = {
   yMax: 'yMax'
 };
 
+exports.Prisma.UsersScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  time: 'time'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -138,7 +144,8 @@ exports.Prisma.QueryMode = {
 
 
 exports.Prisma.ModelName = {
-  Coords: 'Coords'
+  Coords: 'Coords',
+  Users: 'Users'
 };
 
 /**

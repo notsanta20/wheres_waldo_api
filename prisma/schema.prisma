@@ -16,3 +16,9 @@ model Coords {
   yMin      Int
   yMax      Int
 }
+
+model Users {
+  id   String @id @default(uuid())
+  name String
+  time Int
+}
