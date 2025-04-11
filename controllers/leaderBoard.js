@@ -3,7 +3,11 @@ const prisma = new PrismaClient();
 
 async function leaderBoard(req, res) {
   try {
-    const data = await prisma.leaderBoard.findMany({});
+    const data = await prisma.leaderBoard.findMany({
+      orderBy: {
+        timeTaken: `asc`,
+      },
+    });
     res.json({ message: `LeaderBoard`, users: data });
   } catch (err) {
     res
