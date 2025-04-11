@@ -1,16 +1,16 @@
-const { PrismaClient } = require(`@prisma/client`);
+const { PrismaClient } = require(`../prisma/generated/prisma/client`);
 const prisma = new PrismaClient();
 
 async function addName(req, res) {
   const { name, time } = req.body;
+
   try {
-    await prisma.users.create({
+    data = await prisma.leaderBoard.create({
       data: {
-        name: name,
-        time: time,
+        player: name,
+        timeTaken: time.currentTime,
       },
     });
-
     res.json({ message: `Player successfully added to Leaderboard` });
   } catch (err) {
     res

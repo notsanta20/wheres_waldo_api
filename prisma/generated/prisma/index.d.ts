@@ -19,10 +19,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
  */
 export type Coords = $Result.DefaultSelection<Prisma.$CoordsPayload>
 /**
- * Model Users
+ * Model LeaderBoard
  * 
  */
-export type Users = $Result.DefaultSelection<Prisma.$UsersPayload>
+export type LeaderBoard = $Result.DefaultSelection<Prisma.$LeaderBoardPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -160,14 +160,14 @@ export class PrismaClient<
   get coords(): Prisma.CoordsDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.users`: Exposes CRUD operations for the **Users** model.
+   * `prisma.leaderBoard`: Exposes CRUD operations for the **LeaderBoard** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Users
-    * const users = await prisma.users.findMany()
+    * // Fetch zero or more LeaderBoards
+    * const leaderBoards = await prisma.leaderBoard.findMany()
     * ```
     */
-  get users(): Prisma.UsersDelegate<ExtArgs, ClientOptions>;
+  get leaderBoard(): Prisma.LeaderBoardDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -609,7 +609,7 @@ export namespace Prisma {
 
   export const ModelName: {
     Coords: 'Coords',
-    Users: 'Users'
+    LeaderBoard: 'LeaderBoard'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -628,7 +628,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "coords" | "users"
+      modelProps: "coords" | "leaderBoard"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -706,77 +706,77 @@ export namespace Prisma {
           }
         }
       }
-      Users: {
-        payload: Prisma.$UsersPayload<ExtArgs>
-        fields: Prisma.UsersFieldRefs
+      LeaderBoard: {
+        payload: Prisma.$LeaderBoardPayload<ExtArgs>
+        fields: Prisma.LeaderBoardFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.UsersFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsersPayload> | null
+            args: Prisma.LeaderBoardFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LeaderBoardPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.UsersFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsersPayload>
+            args: Prisma.LeaderBoardFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LeaderBoardPayload>
           }
           findFirst: {
-            args: Prisma.UsersFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsersPayload> | null
+            args: Prisma.LeaderBoardFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LeaderBoardPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.UsersFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsersPayload>
+            args: Prisma.LeaderBoardFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LeaderBoardPayload>
           }
           findMany: {
-            args: Prisma.UsersFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsersPayload>[]
+            args: Prisma.LeaderBoardFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LeaderBoardPayload>[]
           }
           create: {
-            args: Prisma.UsersCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsersPayload>
+            args: Prisma.LeaderBoardCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LeaderBoardPayload>
           }
           createMany: {
-            args: Prisma.UsersCreateManyArgs<ExtArgs>
+            args: Prisma.LeaderBoardCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.UsersCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsersPayload>[]
+            args: Prisma.LeaderBoardCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LeaderBoardPayload>[]
           }
           delete: {
-            args: Prisma.UsersDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsersPayload>
+            args: Prisma.LeaderBoardDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LeaderBoardPayload>
           }
           update: {
-            args: Prisma.UsersUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsersPayload>
+            args: Prisma.LeaderBoardUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LeaderBoardPayload>
           }
           deleteMany: {
-            args: Prisma.UsersDeleteManyArgs<ExtArgs>
+            args: Prisma.LeaderBoardDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.UsersUpdateManyArgs<ExtArgs>
+            args: Prisma.LeaderBoardUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.UsersUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsersPayload>[]
+            args: Prisma.LeaderBoardUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LeaderBoardPayload>[]
           }
           upsert: {
-            args: Prisma.UsersUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsersPayload>
+            args: Prisma.LeaderBoardUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LeaderBoardPayload>
           }
           aggregate: {
-            args: Prisma.UsersAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateUsers>
+            args: Prisma.LeaderBoardAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateLeaderBoard>
           }
           groupBy: {
-            args: Prisma.UsersGroupByArgs<ExtArgs>
-            result: $Utils.Optional<UsersGroupByOutputType>[]
+            args: Prisma.LeaderBoardGroupByArgs<ExtArgs>
+            result: $Utils.Optional<LeaderBoardGroupByOutputType>[]
           }
           count: {
-            args: Prisma.UsersCountArgs<ExtArgs>
-            result: $Utils.Optional<UsersCountAggregateOutputType> | number
+            args: Prisma.LeaderBoardCountArgs<ExtArgs>
+            result: $Utils.Optional<LeaderBoardCountAggregateOutputType> | number
           }
         }
       }
@@ -865,7 +865,7 @@ export namespace Prisma {
   }
   export type GlobalOmitConfig = {
     coords?: CoordsOmit
-    users?: UsersOmit
+    leaderBoard?: LeaderBoardOmit
   }
 
   /* Types for Logging */
@@ -2015,346 +2015,312 @@ export namespace Prisma {
 
 
   /**
-   * Model Users
+   * Model LeaderBoard
    */
 
-  export type AggregateUsers = {
-    _count: UsersCountAggregateOutputType | null
-    _avg: UsersAvgAggregateOutputType | null
-    _sum: UsersSumAggregateOutputType | null
-    _min: UsersMinAggregateOutputType | null
-    _max: UsersMaxAggregateOutputType | null
+  export type AggregateLeaderBoard = {
+    _count: LeaderBoardCountAggregateOutputType | null
+    _min: LeaderBoardMinAggregateOutputType | null
+    _max: LeaderBoardMaxAggregateOutputType | null
   }
 
-  export type UsersAvgAggregateOutputType = {
-    time: number | null
-  }
-
-  export type UsersSumAggregateOutputType = {
-    time: number | null
-  }
-
-  export type UsersMinAggregateOutputType = {
+  export type LeaderBoardMinAggregateOutputType = {
     id: string | null
-    name: string | null
-    time: number | null
+    player: string | null
+    timeTaken: string | null
   }
 
-  export type UsersMaxAggregateOutputType = {
+  export type LeaderBoardMaxAggregateOutputType = {
     id: string | null
-    name: string | null
-    time: number | null
+    player: string | null
+    timeTaken: string | null
   }
 
-  export type UsersCountAggregateOutputType = {
+  export type LeaderBoardCountAggregateOutputType = {
     id: number
-    name: number
-    time: number
+    player: number
+    timeTaken: number
     _all: number
   }
 
 
-  export type UsersAvgAggregateInputType = {
-    time?: true
-  }
-
-  export type UsersSumAggregateInputType = {
-    time?: true
-  }
-
-  export type UsersMinAggregateInputType = {
+  export type LeaderBoardMinAggregateInputType = {
     id?: true
-    name?: true
-    time?: true
+    player?: true
+    timeTaken?: true
   }
 
-  export type UsersMaxAggregateInputType = {
+  export type LeaderBoardMaxAggregateInputType = {
     id?: true
-    name?: true
-    time?: true
+    player?: true
+    timeTaken?: true
   }
 
-  export type UsersCountAggregateInputType = {
+  export type LeaderBoardCountAggregateInputType = {
     id?: true
-    name?: true
-    time?: true
+    player?: true
+    timeTaken?: true
     _all?: true
   }
 
-  export type UsersAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LeaderBoardAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Users to aggregate.
+     * Filter which LeaderBoard to aggregate.
      */
-    where?: UsersWhereInput
+    where?: LeaderBoardWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Users to fetch.
+     * Determine the order of LeaderBoards to fetch.
      */
-    orderBy?: UsersOrderByWithRelationInput | UsersOrderByWithRelationInput[]
+    orderBy?: LeaderBoardOrderByWithRelationInput | LeaderBoardOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: UsersWhereUniqueInput
+    cursor?: LeaderBoardWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Users from the position of the cursor.
+     * Take `±n` LeaderBoards from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Users.
+     * Skip the first `n` LeaderBoards.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Users
+     * Count returned LeaderBoards
     **/
-    _count?: true | UsersCountAggregateInputType
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-     * 
-     * Select which fields to average
-    **/
-    _avg?: UsersAvgAggregateInputType
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-     * 
-     * Select which fields to sum
-    **/
-    _sum?: UsersSumAggregateInputType
+    _count?: true | LeaderBoardCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: UsersMinAggregateInputType
+    _min?: LeaderBoardMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: UsersMaxAggregateInputType
+    _max?: LeaderBoardMaxAggregateInputType
   }
 
-  export type GetUsersAggregateType<T extends UsersAggregateArgs> = {
-        [P in keyof T & keyof AggregateUsers]: P extends '_count' | 'count'
+  export type GetLeaderBoardAggregateType<T extends LeaderBoardAggregateArgs> = {
+        [P in keyof T & keyof AggregateLeaderBoard]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateUsers[P]>
-      : GetScalarType<T[P], AggregateUsers[P]>
+        : GetScalarType<T[P], AggregateLeaderBoard[P]>
+      : GetScalarType<T[P], AggregateLeaderBoard[P]>
   }
 
 
 
 
-  export type UsersGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: UsersWhereInput
-    orderBy?: UsersOrderByWithAggregationInput | UsersOrderByWithAggregationInput[]
-    by: UsersScalarFieldEnum[] | UsersScalarFieldEnum
-    having?: UsersScalarWhereWithAggregatesInput
+  export type LeaderBoardGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LeaderBoardWhereInput
+    orderBy?: LeaderBoardOrderByWithAggregationInput | LeaderBoardOrderByWithAggregationInput[]
+    by: LeaderBoardScalarFieldEnum[] | LeaderBoardScalarFieldEnum
+    having?: LeaderBoardScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: UsersCountAggregateInputType | true
-    _avg?: UsersAvgAggregateInputType
-    _sum?: UsersSumAggregateInputType
-    _min?: UsersMinAggregateInputType
-    _max?: UsersMaxAggregateInputType
+    _count?: LeaderBoardCountAggregateInputType | true
+    _min?: LeaderBoardMinAggregateInputType
+    _max?: LeaderBoardMaxAggregateInputType
   }
 
-  export type UsersGroupByOutputType = {
+  export type LeaderBoardGroupByOutputType = {
     id: string
-    name: string
-    time: number
-    _count: UsersCountAggregateOutputType | null
-    _avg: UsersAvgAggregateOutputType | null
-    _sum: UsersSumAggregateOutputType | null
-    _min: UsersMinAggregateOutputType | null
-    _max: UsersMaxAggregateOutputType | null
+    player: string
+    timeTaken: string
+    _count: LeaderBoardCountAggregateOutputType | null
+    _min: LeaderBoardMinAggregateOutputType | null
+    _max: LeaderBoardMaxAggregateOutputType | null
   }
 
-  type GetUsersGroupByPayload<T extends UsersGroupByArgs> = Prisma.PrismaPromise<
+  type GetLeaderBoardGroupByPayload<T extends LeaderBoardGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<UsersGroupByOutputType, T['by']> &
+      PickEnumerable<LeaderBoardGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof UsersGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof LeaderBoardGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], UsersGroupByOutputType[P]>
-            : GetScalarType<T[P], UsersGroupByOutputType[P]>
+              : GetScalarType<T[P], LeaderBoardGroupByOutputType[P]>
+            : GetScalarType<T[P], LeaderBoardGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type UsersSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type LeaderBoardSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    name?: boolean
-    time?: boolean
-  }, ExtArgs["result"]["users"]>
+    player?: boolean
+    timeTaken?: boolean
+  }, ExtArgs["result"]["leaderBoard"]>
 
-  export type UsersSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type LeaderBoardSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    name?: boolean
-    time?: boolean
-  }, ExtArgs["result"]["users"]>
+    player?: boolean
+    timeTaken?: boolean
+  }, ExtArgs["result"]["leaderBoard"]>
 
-  export type UsersSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type LeaderBoardSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    name?: boolean
-    time?: boolean
-  }, ExtArgs["result"]["users"]>
+    player?: boolean
+    timeTaken?: boolean
+  }, ExtArgs["result"]["leaderBoard"]>
 
-  export type UsersSelectScalar = {
+  export type LeaderBoardSelectScalar = {
     id?: boolean
-    name?: boolean
-    time?: boolean
+    player?: boolean
+    timeTaken?: boolean
   }
 
-  export type UsersOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "time", ExtArgs["result"]["users"]>
+  export type LeaderBoardOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "player" | "timeTaken", ExtArgs["result"]["leaderBoard"]>
 
-  export type $UsersPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Users"
+  export type $LeaderBoardPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "LeaderBoard"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: string
-      name: string
-      time: number
-    }, ExtArgs["result"]["users"]>
+      player: string
+      timeTaken: string
+    }, ExtArgs["result"]["leaderBoard"]>
     composites: {}
   }
 
-  type UsersGetPayload<S extends boolean | null | undefined | UsersDefaultArgs> = $Result.GetResult<Prisma.$UsersPayload, S>
+  type LeaderBoardGetPayload<S extends boolean | null | undefined | LeaderBoardDefaultArgs> = $Result.GetResult<Prisma.$LeaderBoardPayload, S>
 
-  type UsersCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<UsersFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: UsersCountAggregateInputType | true
+  type LeaderBoardCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<LeaderBoardFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: LeaderBoardCountAggregateInputType | true
     }
 
-  export interface UsersDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Users'], meta: { name: 'Users' } }
+  export interface LeaderBoardDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['LeaderBoard'], meta: { name: 'LeaderBoard' } }
     /**
-     * Find zero or one Users that matches the filter.
-     * @param {UsersFindUniqueArgs} args - Arguments to find a Users
+     * Find zero or one LeaderBoard that matches the filter.
+     * @param {LeaderBoardFindUniqueArgs} args - Arguments to find a LeaderBoard
      * @example
-     * // Get one Users
-     * const users = await prisma.users.findUnique({
+     * // Get one LeaderBoard
+     * const leaderBoard = await prisma.leaderBoard.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends UsersFindUniqueArgs>(args: SelectSubset<T, UsersFindUniqueArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends LeaderBoardFindUniqueArgs>(args: SelectSubset<T, LeaderBoardFindUniqueArgs<ExtArgs>>): Prisma__LeaderBoardClient<$Result.GetResult<Prisma.$LeaderBoardPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Users that matches the filter or throw an error with `error.code='P2025'`
+     * Find one LeaderBoard that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {UsersFindUniqueOrThrowArgs} args - Arguments to find a Users
+     * @param {LeaderBoardFindUniqueOrThrowArgs} args - Arguments to find a LeaderBoard
      * @example
-     * // Get one Users
-     * const users = await prisma.users.findUniqueOrThrow({
+     * // Get one LeaderBoard
+     * const leaderBoard = await prisma.leaderBoard.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends UsersFindUniqueOrThrowArgs>(args: SelectSubset<T, UsersFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends LeaderBoardFindUniqueOrThrowArgs>(args: SelectSubset<T, LeaderBoardFindUniqueOrThrowArgs<ExtArgs>>): Prisma__LeaderBoardClient<$Result.GetResult<Prisma.$LeaderBoardPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Users that matches the filter.
+     * Find the first LeaderBoard that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UsersFindFirstArgs} args - Arguments to find a Users
+     * @param {LeaderBoardFindFirstArgs} args - Arguments to find a LeaderBoard
      * @example
-     * // Get one Users
-     * const users = await prisma.users.findFirst({
+     * // Get one LeaderBoard
+     * const leaderBoard = await prisma.leaderBoard.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends UsersFindFirstArgs>(args?: SelectSubset<T, UsersFindFirstArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends LeaderBoardFindFirstArgs>(args?: SelectSubset<T, LeaderBoardFindFirstArgs<ExtArgs>>): Prisma__LeaderBoardClient<$Result.GetResult<Prisma.$LeaderBoardPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Users that matches the filter or
+     * Find the first LeaderBoard that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UsersFindFirstOrThrowArgs} args - Arguments to find a Users
+     * @param {LeaderBoardFindFirstOrThrowArgs} args - Arguments to find a LeaderBoard
      * @example
-     * // Get one Users
-     * const users = await prisma.users.findFirstOrThrow({
+     * // Get one LeaderBoard
+     * const leaderBoard = await prisma.leaderBoard.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends UsersFindFirstOrThrowArgs>(args?: SelectSubset<T, UsersFindFirstOrThrowArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends LeaderBoardFindFirstOrThrowArgs>(args?: SelectSubset<T, LeaderBoardFindFirstOrThrowArgs<ExtArgs>>): Prisma__LeaderBoardClient<$Result.GetResult<Prisma.$LeaderBoardPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Users that matches the filter.
+     * Find zero or more LeaderBoards that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UsersFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {LeaderBoardFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Users
-     * const users = await prisma.users.findMany()
+     * // Get all LeaderBoards
+     * const leaderBoards = await prisma.leaderBoard.findMany()
      * 
-     * // Get first 10 Users
-     * const users = await prisma.users.findMany({ take: 10 })
+     * // Get first 10 LeaderBoards
+     * const leaderBoards = await prisma.leaderBoard.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const usersWithIdOnly = await prisma.users.findMany({ select: { id: true } })
+     * const leaderBoardWithIdOnly = await prisma.leaderBoard.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends UsersFindManyArgs>(args?: SelectSubset<T, UsersFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends LeaderBoardFindManyArgs>(args?: SelectSubset<T, LeaderBoardFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LeaderBoardPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Users.
-     * @param {UsersCreateArgs} args - Arguments to create a Users.
+     * Create a LeaderBoard.
+     * @param {LeaderBoardCreateArgs} args - Arguments to create a LeaderBoard.
      * @example
-     * // Create one Users
-     * const Users = await prisma.users.create({
+     * // Create one LeaderBoard
+     * const LeaderBoard = await prisma.leaderBoard.create({
      *   data: {
-     *     // ... data to create a Users
+     *     // ... data to create a LeaderBoard
      *   }
      * })
      * 
      */
-    create<T extends UsersCreateArgs>(args: SelectSubset<T, UsersCreateArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends LeaderBoardCreateArgs>(args: SelectSubset<T, LeaderBoardCreateArgs<ExtArgs>>): Prisma__LeaderBoardClient<$Result.GetResult<Prisma.$LeaderBoardPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Users.
-     * @param {UsersCreateManyArgs} args - Arguments to create many Users.
+     * Create many LeaderBoards.
+     * @param {LeaderBoardCreateManyArgs} args - Arguments to create many LeaderBoards.
      * @example
-     * // Create many Users
-     * const users = await prisma.users.createMany({
+     * // Create many LeaderBoards
+     * const leaderBoard = await prisma.leaderBoard.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends UsersCreateManyArgs>(args?: SelectSubset<T, UsersCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends LeaderBoardCreateManyArgs>(args?: SelectSubset<T, LeaderBoardCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Users and returns the data saved in the database.
-     * @param {UsersCreateManyAndReturnArgs} args - Arguments to create many Users.
+     * Create many LeaderBoards and returns the data saved in the database.
+     * @param {LeaderBoardCreateManyAndReturnArgs} args - Arguments to create many LeaderBoards.
      * @example
-     * // Create many Users
-     * const users = await prisma.users.createManyAndReturn({
+     * // Create many LeaderBoards
+     * const leaderBoard = await prisma.leaderBoard.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Users and only return the `id`
-     * const usersWithIdOnly = await prisma.users.createManyAndReturn({
+     * // Create many LeaderBoards and only return the `id`
+     * const leaderBoardWithIdOnly = await prisma.leaderBoard.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -2364,28 +2330,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends UsersCreateManyAndReturnArgs>(args?: SelectSubset<T, UsersCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends LeaderBoardCreateManyAndReturnArgs>(args?: SelectSubset<T, LeaderBoardCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LeaderBoardPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Users.
-     * @param {UsersDeleteArgs} args - Arguments to delete one Users.
+     * Delete a LeaderBoard.
+     * @param {LeaderBoardDeleteArgs} args - Arguments to delete one LeaderBoard.
      * @example
-     * // Delete one Users
-     * const Users = await prisma.users.delete({
+     * // Delete one LeaderBoard
+     * const LeaderBoard = await prisma.leaderBoard.delete({
      *   where: {
-     *     // ... filter to delete one Users
+     *     // ... filter to delete one LeaderBoard
      *   }
      * })
      * 
      */
-    delete<T extends UsersDeleteArgs>(args: SelectSubset<T, UsersDeleteArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends LeaderBoardDeleteArgs>(args: SelectSubset<T, LeaderBoardDeleteArgs<ExtArgs>>): Prisma__LeaderBoardClient<$Result.GetResult<Prisma.$LeaderBoardPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Users.
-     * @param {UsersUpdateArgs} args - Arguments to update one Users.
+     * Update one LeaderBoard.
+     * @param {LeaderBoardUpdateArgs} args - Arguments to update one LeaderBoard.
      * @example
-     * // Update one Users
-     * const users = await prisma.users.update({
+     * // Update one LeaderBoard
+     * const leaderBoard = await prisma.leaderBoard.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2395,30 +2361,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends UsersUpdateArgs>(args: SelectSubset<T, UsersUpdateArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends LeaderBoardUpdateArgs>(args: SelectSubset<T, LeaderBoardUpdateArgs<ExtArgs>>): Prisma__LeaderBoardClient<$Result.GetResult<Prisma.$LeaderBoardPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Users.
-     * @param {UsersDeleteManyArgs} args - Arguments to filter Users to delete.
+     * Delete zero or more LeaderBoards.
+     * @param {LeaderBoardDeleteManyArgs} args - Arguments to filter LeaderBoards to delete.
      * @example
-     * // Delete a few Users
-     * const { count } = await prisma.users.deleteMany({
+     * // Delete a few LeaderBoards
+     * const { count } = await prisma.leaderBoard.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends UsersDeleteManyArgs>(args?: SelectSubset<T, UsersDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends LeaderBoardDeleteManyArgs>(args?: SelectSubset<T, LeaderBoardDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Users.
+     * Update zero or more LeaderBoards.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UsersUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {LeaderBoardUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Users
-     * const users = await prisma.users.updateMany({
+     * // Update many LeaderBoards
+     * const leaderBoard = await prisma.leaderBoard.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2428,14 +2394,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends UsersUpdateManyArgs>(args: SelectSubset<T, UsersUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends LeaderBoardUpdateManyArgs>(args: SelectSubset<T, LeaderBoardUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Users and returns the data updated in the database.
-     * @param {UsersUpdateManyAndReturnArgs} args - Arguments to update many Users.
+     * Update zero or more LeaderBoards and returns the data updated in the database.
+     * @param {LeaderBoardUpdateManyAndReturnArgs} args - Arguments to update many LeaderBoards.
      * @example
-     * // Update many Users
-     * const users = await prisma.users.updateManyAndReturn({
+     * // Update many LeaderBoards
+     * const leaderBoard = await prisma.leaderBoard.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2444,8 +2410,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Users and only return the `id`
-     * const usersWithIdOnly = await prisma.users.updateManyAndReturn({
+     * // Update zero or more LeaderBoards and only return the `id`
+     * const leaderBoardWithIdOnly = await prisma.leaderBoard.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -2458,56 +2424,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends UsersUpdateManyAndReturnArgs>(args: SelectSubset<T, UsersUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends LeaderBoardUpdateManyAndReturnArgs>(args: SelectSubset<T, LeaderBoardUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LeaderBoardPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Users.
-     * @param {UsersUpsertArgs} args - Arguments to update or create a Users.
+     * Create or update one LeaderBoard.
+     * @param {LeaderBoardUpsertArgs} args - Arguments to update or create a LeaderBoard.
      * @example
-     * // Update or create a Users
-     * const users = await prisma.users.upsert({
+     * // Update or create a LeaderBoard
+     * const leaderBoard = await prisma.leaderBoard.upsert({
      *   create: {
-     *     // ... data to create a Users
+     *     // ... data to create a LeaderBoard
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Users we want to update
+     *     // ... the filter for the LeaderBoard we want to update
      *   }
      * })
      */
-    upsert<T extends UsersUpsertArgs>(args: SelectSubset<T, UsersUpsertArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends LeaderBoardUpsertArgs>(args: SelectSubset<T, LeaderBoardUpsertArgs<ExtArgs>>): Prisma__LeaderBoardClient<$Result.GetResult<Prisma.$LeaderBoardPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Users.
+     * Count the number of LeaderBoards.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UsersCountArgs} args - Arguments to filter Users to count.
+     * @param {LeaderBoardCountArgs} args - Arguments to filter LeaderBoards to count.
      * @example
-     * // Count the number of Users
-     * const count = await prisma.users.count({
+     * // Count the number of LeaderBoards
+     * const count = await prisma.leaderBoard.count({
      *   where: {
-     *     // ... the filter for the Users we want to count
+     *     // ... the filter for the LeaderBoards we want to count
      *   }
      * })
     **/
-    count<T extends UsersCountArgs>(
-      args?: Subset<T, UsersCountArgs>,
+    count<T extends LeaderBoardCountArgs>(
+      args?: Subset<T, LeaderBoardCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], UsersCountAggregateOutputType>
+          : GetScalarType<T['select'], LeaderBoardCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Users.
+     * Allows you to perform aggregations operations on a LeaderBoard.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UsersAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {LeaderBoardAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -2527,13 +2493,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends UsersAggregateArgs>(args: Subset<T, UsersAggregateArgs>): Prisma.PrismaPromise<GetUsersAggregateType<T>>
+    aggregate<T extends LeaderBoardAggregateArgs>(args: Subset<T, LeaderBoardAggregateArgs>): Prisma.PrismaPromise<GetLeaderBoardAggregateType<T>>
 
     /**
-     * Group by Users.
+     * Group by LeaderBoard.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UsersGroupByArgs} args - Group by arguments.
+     * @param {LeaderBoardGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -2548,14 +2514,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends UsersGroupByArgs,
+      T extends LeaderBoardGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: UsersGroupByArgs['orderBy'] }
-        : { orderBy?: UsersGroupByArgs['orderBy'] },
+        ? { orderBy: LeaderBoardGroupByArgs['orderBy'] }
+        : { orderBy?: LeaderBoardGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -2604,20 +2570,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, UsersGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUsersGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, LeaderBoardGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetLeaderBoardGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Users model
+   * Fields of the LeaderBoard model
    */
-  readonly fields: UsersFieldRefs;
+  readonly fields: LeaderBoardFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Users.
+   * The delegate class that acts as a "Promise-like" for LeaderBoard.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__UsersClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__LeaderBoardClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -2645,375 +2611,375 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Users model
+   * Fields of the LeaderBoard model
    */
-  interface UsersFieldRefs {
-    readonly id: FieldRef<"Users", 'String'>
-    readonly name: FieldRef<"Users", 'String'>
-    readonly time: FieldRef<"Users", 'Int'>
+  interface LeaderBoardFieldRefs {
+    readonly id: FieldRef<"LeaderBoard", 'String'>
+    readonly player: FieldRef<"LeaderBoard", 'String'>
+    readonly timeTaken: FieldRef<"LeaderBoard", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * Users findUnique
+   * LeaderBoard findUnique
    */
-  export type UsersFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LeaderBoardFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Users
+     * Select specific fields to fetch from the LeaderBoard
      */
-    select?: UsersSelect<ExtArgs> | null
+    select?: LeaderBoardSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Users
+     * Omit specific fields from the LeaderBoard
      */
-    omit?: UsersOmit<ExtArgs> | null
+    omit?: LeaderBoardOmit<ExtArgs> | null
     /**
-     * Filter, which Users to fetch.
+     * Filter, which LeaderBoard to fetch.
      */
-    where: UsersWhereUniqueInput
+    where: LeaderBoardWhereUniqueInput
   }
 
   /**
-   * Users findUniqueOrThrow
+   * LeaderBoard findUniqueOrThrow
    */
-  export type UsersFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LeaderBoardFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Users
+     * Select specific fields to fetch from the LeaderBoard
      */
-    select?: UsersSelect<ExtArgs> | null
+    select?: LeaderBoardSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Users
+     * Omit specific fields from the LeaderBoard
      */
-    omit?: UsersOmit<ExtArgs> | null
+    omit?: LeaderBoardOmit<ExtArgs> | null
     /**
-     * Filter, which Users to fetch.
+     * Filter, which LeaderBoard to fetch.
      */
-    where: UsersWhereUniqueInput
+    where: LeaderBoardWhereUniqueInput
   }
 
   /**
-   * Users findFirst
+   * LeaderBoard findFirst
    */
-  export type UsersFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LeaderBoardFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Users
+     * Select specific fields to fetch from the LeaderBoard
      */
-    select?: UsersSelect<ExtArgs> | null
+    select?: LeaderBoardSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Users
+     * Omit specific fields from the LeaderBoard
      */
-    omit?: UsersOmit<ExtArgs> | null
+    omit?: LeaderBoardOmit<ExtArgs> | null
     /**
-     * Filter, which Users to fetch.
+     * Filter, which LeaderBoard to fetch.
      */
-    where?: UsersWhereInput
+    where?: LeaderBoardWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Users to fetch.
+     * Determine the order of LeaderBoards to fetch.
      */
-    orderBy?: UsersOrderByWithRelationInput | UsersOrderByWithRelationInput[]
+    orderBy?: LeaderBoardOrderByWithRelationInput | LeaderBoardOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Users.
+     * Sets the position for searching for LeaderBoards.
      */
-    cursor?: UsersWhereUniqueInput
+    cursor?: LeaderBoardWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Users from the position of the cursor.
+     * Take `±n` LeaderBoards from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Users.
+     * Skip the first `n` LeaderBoards.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Users.
+     * Filter by unique combinations of LeaderBoards.
      */
-    distinct?: UsersScalarFieldEnum | UsersScalarFieldEnum[]
+    distinct?: LeaderBoardScalarFieldEnum | LeaderBoardScalarFieldEnum[]
   }
 
   /**
-   * Users findFirstOrThrow
+   * LeaderBoard findFirstOrThrow
    */
-  export type UsersFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LeaderBoardFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Users
+     * Select specific fields to fetch from the LeaderBoard
      */
-    select?: UsersSelect<ExtArgs> | null
+    select?: LeaderBoardSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Users
+     * Omit specific fields from the LeaderBoard
      */
-    omit?: UsersOmit<ExtArgs> | null
+    omit?: LeaderBoardOmit<ExtArgs> | null
     /**
-     * Filter, which Users to fetch.
+     * Filter, which LeaderBoard to fetch.
      */
-    where?: UsersWhereInput
+    where?: LeaderBoardWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Users to fetch.
+     * Determine the order of LeaderBoards to fetch.
      */
-    orderBy?: UsersOrderByWithRelationInput | UsersOrderByWithRelationInput[]
+    orderBy?: LeaderBoardOrderByWithRelationInput | LeaderBoardOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Users.
+     * Sets the position for searching for LeaderBoards.
      */
-    cursor?: UsersWhereUniqueInput
+    cursor?: LeaderBoardWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Users from the position of the cursor.
+     * Take `±n` LeaderBoards from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Users.
+     * Skip the first `n` LeaderBoards.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Users.
+     * Filter by unique combinations of LeaderBoards.
      */
-    distinct?: UsersScalarFieldEnum | UsersScalarFieldEnum[]
+    distinct?: LeaderBoardScalarFieldEnum | LeaderBoardScalarFieldEnum[]
   }
 
   /**
-   * Users findMany
+   * LeaderBoard findMany
    */
-  export type UsersFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LeaderBoardFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Users
+     * Select specific fields to fetch from the LeaderBoard
      */
-    select?: UsersSelect<ExtArgs> | null
+    select?: LeaderBoardSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Users
+     * Omit specific fields from the LeaderBoard
      */
-    omit?: UsersOmit<ExtArgs> | null
+    omit?: LeaderBoardOmit<ExtArgs> | null
     /**
-     * Filter, which Users to fetch.
+     * Filter, which LeaderBoards to fetch.
      */
-    where?: UsersWhereInput
+    where?: LeaderBoardWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Users to fetch.
+     * Determine the order of LeaderBoards to fetch.
      */
-    orderBy?: UsersOrderByWithRelationInput | UsersOrderByWithRelationInput[]
+    orderBy?: LeaderBoardOrderByWithRelationInput | LeaderBoardOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Users.
+     * Sets the position for listing LeaderBoards.
      */
-    cursor?: UsersWhereUniqueInput
+    cursor?: LeaderBoardWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Users from the position of the cursor.
+     * Take `±n` LeaderBoards from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Users.
+     * Skip the first `n` LeaderBoards.
      */
     skip?: number
-    distinct?: UsersScalarFieldEnum | UsersScalarFieldEnum[]
+    distinct?: LeaderBoardScalarFieldEnum | LeaderBoardScalarFieldEnum[]
   }
 
   /**
-   * Users create
+   * LeaderBoard create
    */
-  export type UsersCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LeaderBoardCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Users
+     * Select specific fields to fetch from the LeaderBoard
      */
-    select?: UsersSelect<ExtArgs> | null
+    select?: LeaderBoardSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Users
+     * Omit specific fields from the LeaderBoard
      */
-    omit?: UsersOmit<ExtArgs> | null
+    omit?: LeaderBoardOmit<ExtArgs> | null
     /**
-     * The data needed to create a Users.
+     * The data needed to create a LeaderBoard.
      */
-    data: XOR<UsersCreateInput, UsersUncheckedCreateInput>
+    data: XOR<LeaderBoardCreateInput, LeaderBoardUncheckedCreateInput>
   }
 
   /**
-   * Users createMany
+   * LeaderBoard createMany
    */
-  export type UsersCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LeaderBoardCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Users.
+     * The data used to create many LeaderBoards.
      */
-    data: UsersCreateManyInput | UsersCreateManyInput[]
+    data: LeaderBoardCreateManyInput | LeaderBoardCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Users createManyAndReturn
+   * LeaderBoard createManyAndReturn
    */
-  export type UsersCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LeaderBoardCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Users
+     * Select specific fields to fetch from the LeaderBoard
      */
-    select?: UsersSelectCreateManyAndReturn<ExtArgs> | null
+    select?: LeaderBoardSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Users
+     * Omit specific fields from the LeaderBoard
      */
-    omit?: UsersOmit<ExtArgs> | null
+    omit?: LeaderBoardOmit<ExtArgs> | null
     /**
-     * The data used to create many Users.
+     * The data used to create many LeaderBoards.
      */
-    data: UsersCreateManyInput | UsersCreateManyInput[]
+    data: LeaderBoardCreateManyInput | LeaderBoardCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Users update
+   * LeaderBoard update
    */
-  export type UsersUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LeaderBoardUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Users
+     * Select specific fields to fetch from the LeaderBoard
      */
-    select?: UsersSelect<ExtArgs> | null
+    select?: LeaderBoardSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Users
+     * Omit specific fields from the LeaderBoard
      */
-    omit?: UsersOmit<ExtArgs> | null
+    omit?: LeaderBoardOmit<ExtArgs> | null
     /**
-     * The data needed to update a Users.
+     * The data needed to update a LeaderBoard.
      */
-    data: XOR<UsersUpdateInput, UsersUncheckedUpdateInput>
+    data: XOR<LeaderBoardUpdateInput, LeaderBoardUncheckedUpdateInput>
     /**
-     * Choose, which Users to update.
+     * Choose, which LeaderBoard to update.
      */
-    where: UsersWhereUniqueInput
+    where: LeaderBoardWhereUniqueInput
   }
 
   /**
-   * Users updateMany
+   * LeaderBoard updateMany
    */
-  export type UsersUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LeaderBoardUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Users.
+     * The data used to update LeaderBoards.
      */
-    data: XOR<UsersUpdateManyMutationInput, UsersUncheckedUpdateManyInput>
+    data: XOR<LeaderBoardUpdateManyMutationInput, LeaderBoardUncheckedUpdateManyInput>
     /**
-     * Filter which Users to update
+     * Filter which LeaderBoards to update
      */
-    where?: UsersWhereInput
+    where?: LeaderBoardWhereInput
     /**
-     * Limit how many Users to update.
+     * Limit how many LeaderBoards to update.
      */
     limit?: number
   }
 
   /**
-   * Users updateManyAndReturn
+   * LeaderBoard updateManyAndReturn
    */
-  export type UsersUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LeaderBoardUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Users
+     * Select specific fields to fetch from the LeaderBoard
      */
-    select?: UsersSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: LeaderBoardSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Users
+     * Omit specific fields from the LeaderBoard
      */
-    omit?: UsersOmit<ExtArgs> | null
+    omit?: LeaderBoardOmit<ExtArgs> | null
     /**
-     * The data used to update Users.
+     * The data used to update LeaderBoards.
      */
-    data: XOR<UsersUpdateManyMutationInput, UsersUncheckedUpdateManyInput>
+    data: XOR<LeaderBoardUpdateManyMutationInput, LeaderBoardUncheckedUpdateManyInput>
     /**
-     * Filter which Users to update
+     * Filter which LeaderBoards to update
      */
-    where?: UsersWhereInput
+    where?: LeaderBoardWhereInput
     /**
-     * Limit how many Users to update.
+     * Limit how many LeaderBoards to update.
      */
     limit?: number
   }
 
   /**
-   * Users upsert
+   * LeaderBoard upsert
    */
-  export type UsersUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LeaderBoardUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Users
+     * Select specific fields to fetch from the LeaderBoard
      */
-    select?: UsersSelect<ExtArgs> | null
+    select?: LeaderBoardSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Users
+     * Omit specific fields from the LeaderBoard
      */
-    omit?: UsersOmit<ExtArgs> | null
+    omit?: LeaderBoardOmit<ExtArgs> | null
     /**
-     * The filter to search for the Users to update in case it exists.
+     * The filter to search for the LeaderBoard to update in case it exists.
      */
-    where: UsersWhereUniqueInput
+    where: LeaderBoardWhereUniqueInput
     /**
-     * In case the Users found by the `where` argument doesn't exist, create a new Users with this data.
+     * In case the LeaderBoard found by the `where` argument doesn't exist, create a new LeaderBoard with this data.
      */
-    create: XOR<UsersCreateInput, UsersUncheckedCreateInput>
+    create: XOR<LeaderBoardCreateInput, LeaderBoardUncheckedCreateInput>
     /**
-     * In case the Users was found with the provided `where` argument, update it with this data.
+     * In case the LeaderBoard was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<UsersUpdateInput, UsersUncheckedUpdateInput>
+    update: XOR<LeaderBoardUpdateInput, LeaderBoardUncheckedUpdateInput>
   }
 
   /**
-   * Users delete
+   * LeaderBoard delete
    */
-  export type UsersDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LeaderBoardDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Users
+     * Select specific fields to fetch from the LeaderBoard
      */
-    select?: UsersSelect<ExtArgs> | null
+    select?: LeaderBoardSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Users
+     * Omit specific fields from the LeaderBoard
      */
-    omit?: UsersOmit<ExtArgs> | null
+    omit?: LeaderBoardOmit<ExtArgs> | null
     /**
-     * Filter which Users to delete.
+     * Filter which LeaderBoard to delete.
      */
-    where: UsersWhereUniqueInput
+    where: LeaderBoardWhereUniqueInput
   }
 
   /**
-   * Users deleteMany
+   * LeaderBoard deleteMany
    */
-  export type UsersDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LeaderBoardDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Users to delete
+     * Filter which LeaderBoards to delete
      */
-    where?: UsersWhereInput
+    where?: LeaderBoardWhereInput
     /**
-     * Limit how many Users to delete.
+     * Limit how many LeaderBoards to delete.
      */
     limit?: number
   }
 
   /**
-   * Users without action
+   * LeaderBoard without action
    */
-  export type UsersDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LeaderBoardDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Users
+     * Select specific fields to fetch from the LeaderBoard
      */
-    select?: UsersSelect<ExtArgs> | null
+    select?: LeaderBoardSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Users
+     * Omit specific fields from the LeaderBoard
      */
-    omit?: UsersOmit<ExtArgs> | null
+    omit?: LeaderBoardOmit<ExtArgs> | null
   }
 
 
@@ -3043,13 +3009,13 @@ export namespace Prisma {
   export type CoordsScalarFieldEnum = (typeof CoordsScalarFieldEnum)[keyof typeof CoordsScalarFieldEnum]
 
 
-  export const UsersScalarFieldEnum: {
+  export const LeaderBoardScalarFieldEnum: {
     id: 'id',
-    name: 'name',
-    time: 'time'
+    player: 'player',
+    timeTaken: 'timeTaken'
   };
 
-  export type UsersScalarFieldEnum = (typeof UsersScalarFieldEnum)[keyof typeof UsersScalarFieldEnum]
+  export type LeaderBoardScalarFieldEnum = (typeof LeaderBoardScalarFieldEnum)[keyof typeof LeaderBoardScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -3177,48 +3143,46 @@ export namespace Prisma {
     yMax?: IntWithAggregatesFilter<"Coords"> | number
   }
 
-  export type UsersWhereInput = {
-    AND?: UsersWhereInput | UsersWhereInput[]
-    OR?: UsersWhereInput[]
-    NOT?: UsersWhereInput | UsersWhereInput[]
-    id?: StringFilter<"Users"> | string
-    name?: StringFilter<"Users"> | string
-    time?: IntFilter<"Users"> | number
+  export type LeaderBoardWhereInput = {
+    AND?: LeaderBoardWhereInput | LeaderBoardWhereInput[]
+    OR?: LeaderBoardWhereInput[]
+    NOT?: LeaderBoardWhereInput | LeaderBoardWhereInput[]
+    id?: StringFilter<"LeaderBoard"> | string
+    player?: StringFilter<"LeaderBoard"> | string
+    timeTaken?: StringFilter<"LeaderBoard"> | string
   }
 
-  export type UsersOrderByWithRelationInput = {
+  export type LeaderBoardOrderByWithRelationInput = {
     id?: SortOrder
-    name?: SortOrder
-    time?: SortOrder
+    player?: SortOrder
+    timeTaken?: SortOrder
   }
 
-  export type UsersWhereUniqueInput = Prisma.AtLeast<{
+  export type LeaderBoardWhereUniqueInput = Prisma.AtLeast<{
     id?: string
-    AND?: UsersWhereInput | UsersWhereInput[]
-    OR?: UsersWhereInput[]
-    NOT?: UsersWhereInput | UsersWhereInput[]
-    name?: StringFilter<"Users"> | string
-    time?: IntFilter<"Users"> | number
+    AND?: LeaderBoardWhereInput | LeaderBoardWhereInput[]
+    OR?: LeaderBoardWhereInput[]
+    NOT?: LeaderBoardWhereInput | LeaderBoardWhereInput[]
+    player?: StringFilter<"LeaderBoard"> | string
+    timeTaken?: StringFilter<"LeaderBoard"> | string
   }, "id">
 
-  export type UsersOrderByWithAggregationInput = {
+  export type LeaderBoardOrderByWithAggregationInput = {
     id?: SortOrder
-    name?: SortOrder
-    time?: SortOrder
-    _count?: UsersCountOrderByAggregateInput
-    _avg?: UsersAvgOrderByAggregateInput
-    _max?: UsersMaxOrderByAggregateInput
-    _min?: UsersMinOrderByAggregateInput
-    _sum?: UsersSumOrderByAggregateInput
+    player?: SortOrder
+    timeTaken?: SortOrder
+    _count?: LeaderBoardCountOrderByAggregateInput
+    _max?: LeaderBoardMaxOrderByAggregateInput
+    _min?: LeaderBoardMinOrderByAggregateInput
   }
 
-  export type UsersScalarWhereWithAggregatesInput = {
-    AND?: UsersScalarWhereWithAggregatesInput | UsersScalarWhereWithAggregatesInput[]
-    OR?: UsersScalarWhereWithAggregatesInput[]
-    NOT?: UsersScalarWhereWithAggregatesInput | UsersScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Users"> | string
-    name?: StringWithAggregatesFilter<"Users"> | string
-    time?: IntWithAggregatesFilter<"Users"> | number
+  export type LeaderBoardScalarWhereWithAggregatesInput = {
+    AND?: LeaderBoardScalarWhereWithAggregatesInput | LeaderBoardScalarWhereWithAggregatesInput[]
+    OR?: LeaderBoardScalarWhereWithAggregatesInput[]
+    NOT?: LeaderBoardScalarWhereWithAggregatesInput | LeaderBoardScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"LeaderBoard"> | string
+    player?: StringWithAggregatesFilter<"LeaderBoard"> | string
+    timeTaken?: StringWithAggregatesFilter<"LeaderBoard"> | string
   }
 
   export type CoordsCreateInput = {
@@ -3284,46 +3248,46 @@ export namespace Prisma {
     yMax?: IntFieldUpdateOperationsInput | number
   }
 
-  export type UsersCreateInput = {
+  export type LeaderBoardCreateInput = {
     id?: string
-    name: string
-    time: number
+    player: string
+    timeTaken: string
   }
 
-  export type UsersUncheckedCreateInput = {
+  export type LeaderBoardUncheckedCreateInput = {
     id?: string
-    name: string
-    time: number
+    player: string
+    timeTaken: string
   }
 
-  export type UsersUpdateInput = {
+  export type LeaderBoardUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    time?: IntFieldUpdateOperationsInput | number
+    player?: StringFieldUpdateOperationsInput | string
+    timeTaken?: StringFieldUpdateOperationsInput | string
   }
 
-  export type UsersUncheckedUpdateInput = {
+  export type LeaderBoardUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    time?: IntFieldUpdateOperationsInput | number
+    player?: StringFieldUpdateOperationsInput | string
+    timeTaken?: StringFieldUpdateOperationsInput | string
   }
 
-  export type UsersCreateManyInput = {
+  export type LeaderBoardCreateManyInput = {
     id?: string
-    name: string
-    time: number
+    player: string
+    timeTaken: string
   }
 
-  export type UsersUpdateManyMutationInput = {
+  export type LeaderBoardUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    time?: IntFieldUpdateOperationsInput | number
+    player?: StringFieldUpdateOperationsInput | string
+    timeTaken?: StringFieldUpdateOperationsInput | string
   }
 
-  export type UsersUncheckedUpdateManyInput = {
+  export type LeaderBoardUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    time?: IntFieldUpdateOperationsInput | number
+    player?: StringFieldUpdateOperationsInput | string
+    timeTaken?: StringFieldUpdateOperationsInput | string
   }
 
   export type StringFilter<$PrismaModel = never> = {
@@ -3427,30 +3391,22 @@ export namespace Prisma {
     _max?: NestedIntFilter<$PrismaModel>
   }
 
-  export type UsersCountOrderByAggregateInput = {
+  export type LeaderBoardCountOrderByAggregateInput = {
     id?: SortOrder
-    name?: SortOrder
-    time?: SortOrder
+    player?: SortOrder
+    timeTaken?: SortOrder
   }
 
-  export type UsersAvgOrderByAggregateInput = {
-    time?: SortOrder
-  }
-
-  export type UsersMaxOrderByAggregateInput = {
+  export type LeaderBoardMaxOrderByAggregateInput = {
     id?: SortOrder
-    name?: SortOrder
-    time?: SortOrder
+    player?: SortOrder
+    timeTaken?: SortOrder
   }
 
-  export type UsersMinOrderByAggregateInput = {
+  export type LeaderBoardMinOrderByAggregateInput = {
     id?: SortOrder
-    name?: SortOrder
-    time?: SortOrder
-  }
-
-  export type UsersSumOrderByAggregateInput = {
-    time?: SortOrder
+    player?: SortOrder
+    timeTaken?: SortOrder
   }
 
   export type StringFieldUpdateOperationsInput = {

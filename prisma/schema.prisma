@@ -17,8 +17,8 @@ model Coords {
   yMax      Int
 }
 
-model Users {
-  id   String @id @default(uuid())
-  name String
-  time Int
+model LeaderBoard {
+  id        String @id @default(uuid())
+  player    String
+  timeTaken String
 }

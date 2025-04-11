@@ -11,10 +11,10 @@ CREATE TABLE "Coords" (
 );
 
 -- CreateTable
-CREATE TABLE "Users" (
+CREATE TABLE "LeaderBoard" (
     "id" TEXT NOT NULL,
-    "name" TEXT NOT NULL,
-    "time" INTEGER NOT NULL,
+    "player" TEXT NOT NULL,
+    "timeTaken" TEXT NOT NULL,
 
-    CONSTRAINT "Users_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "LeaderBoard_pkey" PRIMARY KEY ("id")
 );

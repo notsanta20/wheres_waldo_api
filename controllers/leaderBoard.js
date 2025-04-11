@@ -1,9 +1,9 @@
-const { PrismaClient } = require(`@prisma/client`);
+const { PrismaClient } = require(`../prisma/generated/prisma/client`);
 const prisma = new PrismaClient();
 
 async function leaderBoard(req, res) {
   try {
-    const data = await prisma.users.findMany({});
+    const data = await prisma.leaderBoard.findMany({});
     res.json({ message: `LeaderBoard`, users: data });
   } catch (err) {
     res
