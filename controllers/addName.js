@@ -8,7 +8,7 @@ async function addName(req, res) {
     data = await prisma.leaderBoard.create({
       data: {
         player: name,
-        timeTaken: time.currentTime,
+        timeTaken: time,
       },
     });
     res.json({ message: `Player successfully added to Leaderboard` });
