@@ -162,13 +162,13 @@ const config = {
   "inlineDatasources": {
     "db": {
       "url": {
-        "fromEnvVar": "LOCAL_DATABASE_URL",
+        "fromEnvVar": "HOST_DATABASE_URL",
         "value": null
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"./generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"LOCAL_DATABASE_URL\")\n}\n\nmodel Coords {\n  id        String @id @default(uuid())\n  character String\n  xMin      Int\n  xMax      Int\n  yMin      Int\n  yMax      Int\n}\n\nmodel LeaderBoard {\n  id        String @id @default(uuid())\n  player    String\n  timeTaken String\n}\n",
-  "inlineSchemaHash": "91ff01b59054887b5b45d09e09189a10fa8b1d8d506b8258c95e46ad57a8f674",
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"./generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"HOST_DATABASE_URL\")\n}\n\nmodel Coords {\n  id        String @id @default(uuid())\n  character String\n  xMin      Int\n  xMax      Int\n  yMin      Int\n  yMax      Int\n}\n\nmodel LeaderBoard {\n  id        String @id @default(uuid())\n  player    String\n  timeTaken String\n}\n",
+  "inlineSchemaHash": "3cf661841a05341621cbd7234792ea540a5228d09f9764577ae2b17036a699e4",
   "copyEngine": true
 }
 config.dirname = '/'
@@ -180,7 +180,7 @@ config.compilerWasm = undefined
 
 config.injectableEdgeEnv = () => ({
   parsed: {
-    LOCAL_DATABASE_URL: typeof globalThis !== 'undefined' && globalThis['LOCAL_DATABASE_URL'] || typeof process !== 'undefined' && process.env && process.env.LOCAL_DATABASE_URL || undefined
+    HOST_DATABASE_URL: typeof globalThis !== 'undefined' && globalThis['HOST_DATABASE_URL'] || typeof process !== 'undefined' && process.env && process.env.HOST_DATABASE_URL || undefined
   }
 })
 
